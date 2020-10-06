@@ -28,8 +28,9 @@ class Database
     protected static $setter;
     protected static $binding = [];
 
-    private function __construct()
+    private function __construct($table)
     {
+        static::$table = $table;
     }
 
     private static function connect()
@@ -55,8 +56,9 @@ class Database
     private static function instance()
     {
         static::connect();
+        $table = static::$table;
         if (!self::$instance) {
-            self::$instance = new Database;
+            self::$instance = new Database($table);
         }
 
         return self::$instance;
