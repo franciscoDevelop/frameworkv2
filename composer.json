@@ -1,0 +1,27 @@
+{
+  "name": "thekaincode/framework",
+  "description": "TheKainCode framework",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Francisco Rodriguez",
+      "email": "francisco.develop@icloud.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.2",
+    "filp/whoops": "^2.7",
+    "jenssegers/blade": "^1.4",
+    "rakit/validation": "^1.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheKainCode\\": "src/"
+    },
+    "files": [
+      "src/Helpers/helper.php"
+    ]
+  }
+}
